@@ -2,6 +2,7 @@ from scipy.io.wavfile import read
 import matplotlib.pyplot as plt
 from numpy import mean
 import sys
+import cPickle as pickle
 
 filename = sys.argv[1]
 input_data = read(filename)
@@ -67,7 +68,9 @@ def plot_cleaned_graph(abs_list, input_value):
     print "graph successfully plotted"
 
 def find_audio_length(ls):
+    length = str( (len(ls)+ 0.0) /frequency )
     print "audio length is: " + str( (len(ls)+ 0.0) /frequency )
+    pickle.dump(float(length), open('audiolength', 'wb')) 
 
 def ask_input_gui():
     import Tkinter as tk

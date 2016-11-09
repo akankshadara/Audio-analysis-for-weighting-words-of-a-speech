@@ -5,6 +5,7 @@ import csv
 import subprocess
 
 from Tkinter import *
+import cPickle as pickle
 
 
 class Window:       
@@ -35,7 +36,8 @@ class Window:
 		subprocess.call(cmd, shell = True)
                 cmd = "python code.py "+self.filename
                 subprocess.call(cmd, shell = True)
-                cmd = "python convertlisttosec.py "+self.filename+".trans"+" asssssssssssssssssssssLENGTH AUDIO NUMBER HEREsssssssssssssssssssss"
+                audiolen = pickle.load(open('audiolength', 'rb'))
+                cmd = "python convertlisttosec.py "+self.filename+".trans "+str(audiolen)
                 subprocess.call(cmd, shell = True)
                 cmd = "python timetoword.py "+self.filename+".transsec timelist > "+self.filename+"_ImportantWordlist.txt"
                 subprocess.call(cmd, shell = True)
