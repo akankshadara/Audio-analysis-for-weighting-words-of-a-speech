@@ -46,6 +46,7 @@ def plot_original_graph(abs_list):
     plt.show()
 
 def plot_cleaned_graph(abs_list, input_value):
+    val = int(input_value)  
     new_l = []
     index_list = []
 
