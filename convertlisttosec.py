@@ -12,7 +12,7 @@ except IndexError:
 
 lis = pickle.load(open(filename, 'rb'))
 print "Enter Audio length : "
-audiolen = float(raw_input())
+audiolen = sys.argv[2]
 lastframe = lis[len(lis)-1][2]
 
 finaltranscript = []
