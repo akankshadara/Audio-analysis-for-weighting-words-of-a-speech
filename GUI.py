@@ -6,7 +6,7 @@ import subprocess
 
 from Tkinter import *
 
-
+  
 class Window:       
 	def __init__(self, master):     
 	    self.filename=""
