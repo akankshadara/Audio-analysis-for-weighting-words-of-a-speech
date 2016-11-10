@@ -43,6 +43,8 @@ class Window:
                 subprocess.call(cmd, shell = True)
                 cmd = "python transtocsv.py "+self.filename+".transsec > "+self.filename+"_csv.txt"
                 subprocess.call(cmd, shell = True)
+                cmd = "python generate_summary.py"
+                subprocess.call(cmd, shell = True)
 	    
 root = Tk()
 window=Window(root)
