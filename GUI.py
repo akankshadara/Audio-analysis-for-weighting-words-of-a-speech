@@ -39,9 +39,9 @@ class Window:
                 audiolen = pickle.load(open('audiolength', 'rb'))
                 cmd = "python convertlisttosec.py "+self.filename+".trans "+str(audiolen)
                 subprocess.call(cmd, shell = True)
-                cmd = "python timetoword.py "+self.filename+".transsec timelist > "+self.filename+"_ImportantWordlist.txt"
+                cmd = "python timetoword.py "+self.filename+".transsec timelist > "+"words_from_audio.txt"
                 subprocess.call(cmd, shell = True)
-                cmd = "python transtocsv.py "+self.filename+".transsec > "+self.filename+"_csv.txt"
+                cmd = "python transtocsv.py "+self.filename+".transsec > "+"input_file.txt"
                 subprocess.call(cmd, shell = True)
                 cmd = "python generate_summary.py"
                 subprocess.call(cmd, shell = True)
