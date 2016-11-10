@@ -43,6 +43,10 @@ for word in ans:
         if word[:t] in stop_words:
             continue
         finalans.append(word[:t])
-print finalans
+#print finalans
+ans = ""
+for x in finalans:
+	ans += x+', '
+print ans
 
 

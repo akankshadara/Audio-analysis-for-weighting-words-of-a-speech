@@ -48,7 +48,7 @@ j = 1
 againnewlist = []
 againnewlist.append(newlist[0])
 while i < len(newlist):
-    if len(newlist[i]) <= 10:
+    if len(newlist[i]) <= 17:
         againnewlist[j-1] += newlist[i]
         i+=1
     else:

@@ -1,1 +1,1 @@
-['faster', 'patter', "it's", 'data', 'series', 'simpler', 'fact', 'structure', 'improve', 'accuracy', 'downside']
+faster, patter, it's, data, series, simpler, fact, structure, improve, accuracy, downside, 
