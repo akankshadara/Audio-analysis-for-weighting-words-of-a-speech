@@ -1,6 +1,6 @@
 import summarizer
 
-SUMMARY_LENGTH = 4
+SUMMARY_LENGTH = 10
 
 input_file = "input_file.txt"
 # "reason_deep_learning_csv.txt" 

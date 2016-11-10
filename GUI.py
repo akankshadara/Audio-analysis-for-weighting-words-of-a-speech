@@ -41,10 +41,14 @@ class Window:
                 subprocess.call(cmd, shell = True)
                 cmd = "python timetoword.py "+self.filename+".transsec timelist > "+"words_from_audio.txt"
                 subprocess.call(cmd, shell = True)
+                cmd = "rm input_file.txt"
+                subprocess.call(cmd, shell = True)
+                
                 cmd = "python transtocsv.py "+self.filename+".transsec > "+"input_file.txt"
                 subprocess.call(cmd, shell = True)
                 cmd = "python generate_summary.py"
                 subprocess.call(cmd, shell = True)
+                sys.exit(1)
 	    
 root = Tk()
 window=Window(root)

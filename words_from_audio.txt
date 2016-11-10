@@ -1,1 +1,1 @@
-regulating,rajan,monetory,rbi,gold,fiscal,policy
+['faster', 'patter', "it's", 'data', 'series', 'simpler', 'fact', 'structure', 'improve', 'accuracy', 'downside']
