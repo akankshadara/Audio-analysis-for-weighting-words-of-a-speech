@@ -50,3 +50,5 @@ audiolength
 timelist
 input_file.txt
 words_from_audio.txt
+*.txt
+*.zip
