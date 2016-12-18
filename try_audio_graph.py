@@ -10,19 +10,18 @@ audio = input_data[1]
 
 l = abs(audio[:, 1])
 
-m =  mean(l)
+m =  mean(l)           #printing the mean value ; usually turns out to be very less
 print "mean = " + str(m)
 
-new_l = []
+new_l = []             #enumerating each point in list 'l' ; 
 for (index,element) in enumerate(l):
-    if (int(element)< 10000):
-        new_l.append(0)
-    else:
-        new_l.append(element)
+    if (int(element)< 10000):       #setting the threshold to be 10,000 here ; if value is less than threshold than set the
+        new_l.append(0)             # .. new value to 0 in the new list 'new_l'
+    else:   
+        new_l.append(element)       # else set the original value in the new_list
 
-# print new_l[15:30]
 
-print "plotting the graph..."
+print "plotting the graph..."       # plotting the graph of this new list
 subplot(2,1,1)
 plt.plot(new_l)
 subplot(2,1,2)
@@ -34,9 +33,7 @@ plt.title("Sample Wav")
 plt.show()
 # '''
 
-
-
-
+# initial try for implementing the code.
 '''
 import matplotlib.pyplot as plt
 import numpy as np
